@@ -44,7 +44,7 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **2�
 
 ## 📌 Sobre
 
-Trabalhos desenvolvidos em grupo como parte da grade curricular do curso técnico, abrangendo os conteúdos do primeiro bimestre.
+Trabalhos desenvolvidos em grupo como parte da grade curricular do curso técnico, abrangendo os conteúdos do segundo bimestre.
 
 ---
 
