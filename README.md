@@ -1,6 +1,6 @@
-# 📚 Desenvolvimento de Sistemas — 1º Bimestre
+# 📚 Desenvolvimento de Sistemas — 2º Bimestre
 
-Repositório do grupo para as atividades e projetos desenvolvidos durante o **1º Bimestre** da disciplina de Desenvolvimento de Sistemas.
+Repositório do grupo para as atividades e projetos desenvolvidos durante o **2º Bimestre** da disciplina de Desenvolvimento de Sistemas.
 
 ---
 
@@ -26,7 +26,6 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **1�
 │   ├── Miguel-Daniel/
 │   └── Valentino-Caua/
 ├── 📂 SE - SISTEMAS EMBARCADOS/
-│   ├── 1B-M1-Questionario/
 │   ├── Miguel-Daniel/
 │   └── Valentino-Caua/
 └── README.md
