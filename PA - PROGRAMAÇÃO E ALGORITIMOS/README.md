@@ -4,54 +4,33 @@
 **Grupo:** Cauã, Daniel, Miguel, Valentino
 
 ---
+## 👥 Integrantes
 
-## 📁 Estrutura da Pasta
-PA - PROGRAMAÇÃO E ALGORITIMOS/
-├── LinguagemC --- Daniel-Miguel/
-│   ├── 
-│   ├── 
-├── LinguagemC --- Valentino-Caua/
-│   ├── 
-│   ├── 
-
-
+| Nome | GitHub |
+|------|--------|
+| Cauã Balzaneli | [@balzaNeli](https://github.com/balzaNeli) |
+| Daniel de Sousa Araújo | [@Dresk7](https://github.com/dresk7) |
+| Miguel Marcelo | [@miguelmarcelo15](https://github.com/miguelmarcelo15) |
+| Valentino Chagas Hoehne | [@ValentinoHoehne](https://github.com/ValentinoHoehne) |
 
 ---
 
-## 📋 Sobre o Projeto
+## 📁 Estrutura do Repositório
+```
+📦 1-BIM/
+├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
+│   ├── LinguagemC --- Daniel-Miguel/
+│   ├── LinguagemC --- Valentino-Caua/
+│   └── ...
+├── 📂 PW - PROGRAMACAO WEB 1/
+│   ├── Miguel-Daniel/
+│   └── Valentino-Caua/
+├── 📂 SE - SISTEMAS EMBARCADOS/
+│   ├── Miguel-Daniel/
+│   └── Valentino-Caua/
+└── README.md
+```
 
-(Escreva aqui uma breve descrição do que será desenvolvido nessa disciplina)
-
-### 🎯 Objetivos
-- 
-- 
-- 
-
-### 🛠️ Tecnologias Utilizadas
-- 
-- 
-- 
-
----
-
-## 📅 Entregas
-
-| Entrega          | Data       | Status     | Link |
-|------------------|------------|------------|------|
-| Entrega 1        | dd/mm/aaaa | ⬜ Pendente / ✅ Concluída | [Ver](./entregas/entrega-1) |
-| Entrega 2        | dd/mm/aaaa | ⬜ Pendente / ✅ Concluída | [Ver](./entregas/entrega-2) |
-| Entrega Final    | dd/mm/aaaa | ⬜ Pendente / ✅ Concluída | [Ver](./entregas/entrega-final) |
-
----
-
-## 👥 Membros do Grupo
-
-| Nome         | GitHub                  | Função              |
-|--------------|-------------------------|---------------------|
-| Cauã        | [@seuuser](https://github.com/balzaNeli) |                     |
-| Daniel      | [@seuuser](https://github.com/seuuser) |                     |
-| Miguel      | [@seuuser](https://github.com/seuuser) |                     |
-| Valentino   | [@seuuser](https://github.com/seuuser) |                     |
 
 ---
 
