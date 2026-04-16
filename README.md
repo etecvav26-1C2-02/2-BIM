@@ -19,8 +19,8 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **2�
 ```
 📦 1-BIM/
 ├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
-│   ├── Portugol --- Daniel-Miguel/
-│   ├── Portugol --- Valentino-Caua/
+│   ├── LinguagemC --- Daniel-Miguel/
+│   ├── LinguagemC --- Valentino-Caua/
 │   └── ...
 ├── 📂 PW - PROGRAMACAO WEB 1/
 │   ├── Miguel-Daniel/
