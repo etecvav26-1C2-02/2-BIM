@@ -22,12 +22,6 @@
 │   ├── LinguagemC --- Daniel-Miguel/
 │   ├── LinguagemC --- Valentino-Caua/
 │   └── ...
-├── 📂 PW - PROGRAMACAO WEB 1/
-│   ├── Miguel-Daniel/
-│   └── Valentino-Caua/
-├── 📂 SE - SISTEMAS EMBARCADOS/
-│   ├── Miguel-Daniel/
-│   └── Valentino-Caua/
 └── README.md
 ```
 
