@@ -1,4 +1,4 @@
-# 📚 Disciplina - [Nome da Disciplina]
+# 📚 Disciplina - PA - PROGRAMAÇÃO E ALGORITMOS
 
 **Turma:** 1C2  
 **Grupo:** Cauã, Daniel, Miguel, Valentino
