@@ -1,0 +1,6 @@
+1 Clonar repositório
+git clone <link do repositorio>
+
+git config --global user.email "seuemail@.com"
+git config --global user.name "Your name"
+
