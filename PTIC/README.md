@@ -17,7 +17,7 @@
 
 ## 📁 Estrutura do Repositório
 ```
-📦 1-BIM/
+📦PTIC/
 ├── 📂Grupo/
 │   ├── /
 │   ├── /
