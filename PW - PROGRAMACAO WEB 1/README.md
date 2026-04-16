@@ -18,7 +18,7 @@
 
 ## 📁 Estrutura do Repositório
 ```
-📦 1-BIM/
+📦PW - PROGRAMACAO WEB 1/
 ├── 📂Miguel-Daniel/
 │   ├── /
 │   ├── /
