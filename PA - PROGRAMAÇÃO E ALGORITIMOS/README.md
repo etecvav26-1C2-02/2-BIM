@@ -17,7 +17,7 @@
 
 ## 📁 Estrutura do Repositório
 ```
-📦 1-BIM/
+📦 PA - PROGRAMAÇÃO E ALGORITIMOS/
 ├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
 │   ├── LinguagemC --- Daniel-Miguel/
 │   ├── LinguagemC --- Valentino-Caua/
