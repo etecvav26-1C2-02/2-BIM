@@ -1,10 +1,3 @@
-/*
-   Autores: Caua Balzaneli, Valentino Hoehne
-   Data: 26/02/2026
-   Finalidade: Ler um número inteiro. Verificar e exibir se o número é primo.
-*/
-
-
 
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
