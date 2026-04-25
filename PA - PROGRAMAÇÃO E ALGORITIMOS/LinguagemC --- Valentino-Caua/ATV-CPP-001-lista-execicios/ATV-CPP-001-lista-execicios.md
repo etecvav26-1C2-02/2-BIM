@@ -133,8 +133,141 @@ int main() {
 }
 
 ```
+# Exercício 8
+### Ler um número. Exiba a soma de todos os números pares e ímpares de zero até o número lido.
+
+```C++
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Ler um número. Exiba a soma de todos os números pares e ímpares de zero até o número lido.
+*/
+
+
+#include <iostream>
+using namespace std;
 
 
 
+int main() {
+    int num;
+    int somaPares = 0;
+    int somaImpares = 0;
+    
+    cout << "Digite um numero: ";
+    cin >> num;
+
+    for (int i = 0; i <= num; i++) {
+        if (i % 2 == 0) {
+            somaPares += i;
+        } else {
+            somaImpares += i;
+        }
+    }
+
+    cout << "Soma dos pares:   " << somaPares   << endl;
+    cout << "Soma dos impares: " << somaImpares << endl;
+    return 0;
+}
+
+```
+---
+
+# Exercício 9
+### Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
 
 
+```C++
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
+*/
+
+
+#include <iostream>
+using namespace std;
+
+
+
+int main() {
+    // Ler um numero entre 50 e 100, verificador
+    int num;
+    int a = 0, b = 1, proximo, i;
+
+    do {
+        cout << "Digite um numero entre 50 e 100: ";
+        cin >> num;
+    } while (num < 50 || num > 100);
+    
+
+    // Sequencia de Fibonacci, o proximo e a soma dos dois anteriores
+    for (i = 0; i < num; i++) {
+        cout << a;
+        proximo = a + b;
+        a = b;
+        b = proximo;
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+
+```
+---
+# Exercício 10
+###Simular um jogo de adivinhação. O programa gera um número aleatório e o jogador precisa acertá-lo. A cada tentativa, o programa informa se o palpite é muito alto, muito baixo ou correto. Quando acertar, exibe a quantidade de palpites.
+
+```C++
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Simular um jogo de adivinhação. O programa gera um número
+   aleatório e o jogador precisa acertá-lo. A cada tentativa, o programa
+   informa se o palpite é muito alto, muito baixo ou correto. Quando acertar,
+   exibe a quantidade de palpites.
+*/
+
+#include <iostream>
+#include <random>
+
+using namespace std;
+
+int main() {
+    //Definindo variaveis
+    int qtdPalpites = 0;
+    int palpite;
+
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> dist(0, 10);
+
+    int num = dist(gen);
+
+    do {
+        cout << "Digite um palpite: ";
+        cin >> palpite;
+
+        qtdPalpites++;
+
+        if (palpite < num) {
+            cout << "Palpite muito baixo." << endl;
+        }
+        else if (palpite > num) {
+            cout << "Palpite muito alto." << endl;
+        }
+        else {
+            cout << "Palpite correto! Voce acertou em "
+                 << qtdPalpites << " tentativas." << endl;
+        }
+
+    } while (palpite != num);
+
+    return 0;
+}
+
+```
+
+
+---
