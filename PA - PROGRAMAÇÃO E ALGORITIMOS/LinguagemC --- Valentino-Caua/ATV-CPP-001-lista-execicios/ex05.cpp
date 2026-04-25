@@ -1,29 +1,26 @@
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
-   Data: 23/04/2026
-   Finalidade: Ler um número para a parada final e outro número que representa um múltiplo. Exibir os múltiplos do número lido de 1 até o número final lido.
+   Data: 24/04/2026
+   Finalidade: Gerar e exibir os múltiplos de um número até um limite informado pelo usuário.
 */
-
 
 #include <iostream>
 using namespace std;
 
-
-
 int main() {
-    int numeroFinal, multiplo;
-    cout << "Digite o número para a parada final: ";
+    int numeroFinal;
+    int multiplo;
+    int resultado;
+
+    cout << "fala a parada final: ";
     cin >> numeroFinal;
-    cout << "Digite o número que representa um múltiplo: ";
+    cout << "um multiplo agr: ";
     cin >> multiplo;
 
-    for(int i = 1; i <= numeroFinal; i++) {
-        if(i % multiplo == 0) {
-            cout << i << "\n";
-        }
+    for (int i = 1; i < numeroFinal; i++) {
+        resultado = multiplo * i;
+        cout << resultado << " ";
     }
-
-
 
     return 0;
 }
