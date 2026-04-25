@@ -1,6 +1,6 @@
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
-   Data: //2026
+   Data: 23/04/2026
    Finalidade: Ler vários números até que a soma desses números seja maior que 100. Exibir a multiplicação dos números lidos.
 */
 

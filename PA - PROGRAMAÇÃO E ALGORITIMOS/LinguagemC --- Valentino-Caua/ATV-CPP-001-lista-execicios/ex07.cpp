@@ -1,6 +1,6 @@
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
-   Data: //2026
+   Data: 23/04/2026
    Finalidade: Ler a quantidade de pessoas e ler a altura dessas pessoas. Calcular e exibir a altura média de todas as pessoas.
 
 
