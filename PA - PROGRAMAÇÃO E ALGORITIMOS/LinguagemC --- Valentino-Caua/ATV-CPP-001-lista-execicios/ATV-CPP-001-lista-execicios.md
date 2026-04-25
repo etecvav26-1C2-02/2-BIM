@@ -1,6 +1,6 @@
 # 🧠 Exercícios em C++
 
-Coleção de exercícios básicos em C++ focados em lógica de programação, estruturas de repetição, vetores e conceitos iniciais de orientação a objetos.
+Coleção de exercícios básicos em C++ focados em lógica de programação.
 
 ---
 
@@ -9,6 +9,12 @@ Coleção de exercícios básicos em C++ focados em lógica de programação, es
 ### 💻 Código
 
 ```cpp
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Verificar se um número inteiro é primo contando a quantidade de divisores.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -37,10 +43,6 @@ int main() {
 }
 ```
 
-### 🎯 Objetivo
-
-Verificar se um número inteiro é primo analisando a quantidade de divisores.
-
 ---
 
 ## 📌 Exercício 2 — Potências de um Número
@@ -48,6 +50,12 @@ Verificar se um número inteiro é primo analisando a quantidade de divisores.
 ### 💻 Código
 
 ```cpp
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Calcular e exibir as potências de um número a partir do expoente 0 até um limite baseado no valor informado.
+*/
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -70,10 +78,6 @@ int main() {
 }
 ```
 
-### 🎯 Objetivo
-
-Calcular e exibir potências de um número, começando de expoente 0 até um limite baseado no valor informado.
-
 ---
 
 ## 📌 Exercício 3 — Soma de Números Positivos com Classe
@@ -81,9 +85,13 @@ Calcular e exibir potências de um número, começando de expoente 0 até um lim
 ### 💻 Código
 
 ```cpp
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Ler números positivos, armazená-los em um vetor, calcular sua soma e exibir os valores informados.
+*/
+
 #include <iostream>
-#include <cmath>
-#include <string>
 #include <vector>
 using namespace std;
 
@@ -118,10 +126,6 @@ int main() {
 }
 ```
 
-### 🎯 Objetivo
-
-Receber números positivos, armazená-los em um vetor e calcular sua soma utilizando uma classe.
-
 ---
 
 ## 📌 Exercício 4 — Maior e Menor Valor em um Vetor
@@ -129,6 +133,12 @@ Receber números positivos, armazená-los em um vetor e calcular sua soma utiliz
 ### 💻 Código
 
 ```cpp
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Ler 10 números, armazená-los em um vetor e identificar o maior e o menor valor.
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -164,10 +174,6 @@ int main() {
 }
 ```
 
-### 🎯 Objetivo
-
-Ler 10 números, armazená-los em um vetor e identificar o maior e o menor valor.
-
 ---
 
 ## 📌 Exercício 5 — Múltiplos de um Número
@@ -175,6 +181,12 @@ Ler 10 números, armazená-los em um vetor e identificar o maior e o menor valor
 ### 💻 Código
 
 ```cpp
+/*
+   Autores: Caua Balzaneli, Valentino Hoehne
+   Data: 24/04/2026
+   Finalidade: Gerar e exibir os múltiplos de um número até um limite informado pelo usuário.
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -197,25 +209,7 @@ int main() {
 }
 ```
 
-### 🎯 Objetivo
-
-Gerar e exibir os múltiplos de um número até um limite definido pelo usuário.
-
 ---
-
-## 🚀 Conceitos Praticados
-
-* Estruturas de repetição (`for`, `do while`)
-* Condicionais (`if/else`)
-* Vetores (`vector`)
-* Classes e orientação a objetos
-* Operações matemáticas básicas
-
----
-
-## 📚 Observação
-
-Esses exercícios são ideais para reforçar a base em C++ e desenvolver raciocínio lógico na resolução de problemas.
 
 # Exercício 6
 ### Ler vários números até que a soma desses números seja maior que 100. Exibir a multiplicação dos números lidos.
