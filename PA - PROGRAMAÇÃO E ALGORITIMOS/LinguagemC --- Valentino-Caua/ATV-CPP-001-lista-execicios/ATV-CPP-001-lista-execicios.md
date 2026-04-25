@@ -1,78 +1,222 @@
-# Exercício 1
-### Ler um número inteiro. Verificar e exibir se o número é primo.
+# 🧠 Exercícios em C++
 
-```C++
+Coleção de exercícios básicos em C++ focados em lógica de programação, estruturas de repetição, vetores e conceitos iniciais de orientação a objetos.
 
-/*
-   Autores: Caua Balzaneli, Valentino Hoehne
-   Data: 23/04/2026
-   Finalidade: Ler um número inteiro. Verificar e exibir se o número é primo.
-*/
+---
 
+## 📌 Exercício 1 — Verificador de Número Primo
+
+### 💻 Código
+
+```cpp
 #include <iostream>
-
 using namespace std;
 
 int main() {
     int numero;
-    int divisores = 0;
+    int divido = 0;
 
-    cout << "Digite seu número: ";
+    cout << "seu numero inteiro: ";
     cin >> numero;
 
     if (numero <= 1) {
-        cout << "O número " << numero << " não é primo." << endl;
+        cout << "n é primo";
     } else {
         for (int i = 1; i <= numero; i++) {
             if (numero % i == 0) {
-                divisores++;
+                divido++;
             }
         }
 
-        if (divisores == 2) {
-            cout << "O número " << numero << " é primo!" << endl;
+        if (divido == 2) {
+            cout << "primo";
         } else {
-            cout << "O número " << numero << " não é primo." << endl;
+            cout << "n é primo";
         }
     }
-
-    return 0;
 }
-
 ```
+
+### 🎯 Objetivo
+
+Verificar se um número inteiro é primo analisando a quantidade de divisores.
+
 ---
 
-# Exercício 5
-### Ler um número para a parada final e outro número que representa um múltiplo. Exibir os múltiplos do número lido de 1 até o número final lido.
+## 📌 Exercício 2 — Potências de um Número
 
+### 💻 Código
 
-```C++
-/*
-   Autores: Caua Balzaneli, Valentino Hoehne
-   Data: 23/04/2026
-   Finalidade: Ler um número para a parada final e outro número que representa um múltiplo. Exibir os múltiplos do número lido de 1 até o número final lido.
-*/
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
 
+int main() {
+    double numero;
+    double potencia = 0;
+    
+    cout << "escreva seu numero: ";
+    cin >> numero;
+    
+    do {
+        double resultado = pow(numero, potencia);
+        potencia++;
+        cout << "\n respota é: " << resultado;
+        
+    } while (numero > potencia);
+    
+    return 0;
+}
+```
+
+### 🎯 Objetivo
+
+Calcular e exibir potências de um número, começando de expoente 0 até um limite baseado no valor informado.
+
+---
+
+## 📌 Exercício 3 — Soma de Números Positivos com Classe
+
+### 💻 Código
+
+```cpp
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <vector>
+using namespace std;
+
+class soma {
+public:
+    float numero;
+    float resultado = 0;
+    vector<float> vecNumeros;
+    
+    void calculo() {
+        do {
+            cout << "diga um numero: ";
+            cin >> numero;
+            if (numero >= 0) {
+                vecNumeros.push_back(numero);
+                resultado = resultado + numero;
+            }
+        } while (numero >= 0);
+
+        cout << "soma dos numeros positivos: " << resultado;
+        cout << "\nnumeros usados: ";
+        for (int posicao : vecNumeros) {
+            cout << posicao << " ";
+        }
+    }    
+};
+
+int main() {
+    soma objCalc;
+    objCalc.calculo();
+    return 0;       
+}
+```
+
+### 🎯 Objetivo
+
+Receber números positivos, armazená-los em um vetor e calcular sua soma utilizando uma classe.
+
+---
+
+## 📌 Exercício 4 — Maior e Menor Valor em um Vetor
+
+### 💻 Código
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> vecNumeros;
+    int numero;
+    int i = 0;
+
+    do {
+        cout << "digite um numero: ";
+        cin >> numero;
+        vecNumeros.push_back(numero);
+        i++;
+    } while (i < 10);
+
+    int menor = vecNumeros[0];
+    int maior = vecNumeros[0];
+    
+    for (float n : vecNumeros) {
+        if (n > maior) {
+            maior = n;
+        }
+        if (n < menor) {
+            menor = n;
+        }
+    }
+        
+    cout << "maior: " << maior << endl;
+    cout << "menor: " << menor << endl;
+    
+    return 0;
+}
+```
+
+### 🎯 Objetivo
+
+Ler 10 números, armazená-los em um vetor e identificar o maior e o menor valor.
+
+---
+
+## 📌 Exercício 5 — Múltiplos de um Número
+
+### 💻 Código
+
+```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-    int numeroFinal, multiplo;
-    cout << "Digite o número para a parada final: ";
+    int numeroFinal;
+    int multiplo;
+    int resultado;
+        
+    cout << "fala a parada final: ";
     cin >> numeroFinal;
-    cout << "Digite o número que representa um múltiplo: ";
+    cout << "um multiplo agr: ";
     cin >> multiplo;
-
-    for(int i = 1; i <= numeroFinal; i++) {
-        if(i % multiplo == 0) {
-            cout << i << "\n";
-        }
+    
+    for (int i = 1; i < numeroFinal; i++) {
+        resultado = multiplo * i;
+        cout << resultado << " ";
     }
+    
     return 0;
 }
-
 ```
+
+### 🎯 Objetivo
+
+Gerar e exibir os múltiplos de um número até um limite definido pelo usuário.
+
 ---
+
+## 🚀 Conceitos Praticados
+
+* Estruturas de repetição (`for`, `do while`)
+* Condicionais (`if/else`)
+* Vetores (`vector`)
+* Classes e orientação a objetos
+* Operações matemáticas básicas
+
+---
+
+## 📚 Observação
+
+Esses exercícios são ideais para reforçar a base em C++ e desenvolver raciocínio lógico na resolução de problemas.
+
 # Exercício 6
 ### Ler vários números até que a soma desses números seja maior que 100. Exibir a multiplicação dos números lidos.
 
