@@ -1,36 +1,32 @@
-
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
-   Data: 26/02/2026
-   Finalidade: Ler um número inteiro. Verificar e exibir se o número é primo.
+   Data: 24/04/2026
+   Finalidade: Verificar se um número inteiro é primo contando a quantidade de divisores.
 */
 
 #include <iostream>
-
 using namespace std;
 
 int main() {
     int numero;
-    int divisores = 0;
+    int divido = 0;
 
-    cout << "Digite seu número: ";
+    cout << "seu numero inteiro: ";
     cin >> numero;
 
     if (numero <= 1) {
-        cout << "O número " << numero << " não é primo." << endl;
+        cout << "n é primo";
     } else {
         for (int i = 1; i <= numero; i++) {
             if (numero % i == 0) {
-                divisores++;
+                divido++;
             }
         }
 
-        if (divisores == 2) {
-            cout << "O número " << numero << " é primo!" << endl;
+        if (divido == 2) {
+            cout << "primo";
         } else {
-            cout << "O número " << numero << " não é primo." << endl;
+            cout << "n é primo";
         }
     }
-
-    return 0;
 }
