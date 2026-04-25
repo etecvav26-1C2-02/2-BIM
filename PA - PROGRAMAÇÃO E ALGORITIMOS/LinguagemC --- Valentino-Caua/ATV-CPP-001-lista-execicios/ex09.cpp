@@ -1,7 +1,7 @@
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
-   Data: //2026
-   Finalidade: 
+   Data: 24/04/2026
+   Finalidade: Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
 */
 
 
