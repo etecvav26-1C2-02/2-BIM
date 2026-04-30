@@ -355,7 +355,7 @@ int main() {
 ```
 ---
 # Exercício 10
-###Simular um jogo de adivinhação. O programa gera um número aleatório e o jogador precisa acertá-lo. A cada tentativa, o programa informa se o palpite é muito alto, muito baixo ou correto. Quando acertar, exibe a quantidade de palpites.
+### Simular um jogo de adivinhação. O programa gera um número aleatório e o jogador precisa acertá-lo. A cada tentativa, o programa informa se o palpite é muito alto, muito baixo ou correto. Quando acertar, exibe a quantidade de palpites.
 
 ```C++
 /*
