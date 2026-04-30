@@ -15,13 +15,27 @@ using namespace std;
 int main() {
     //Definindo variaveis
     int qtdPalpites = 0;
-    int palpite;
+    int palpite, quanto, emQuanto;
+    
+    cout << "Numero base 0: ";
+    cout << "\nNumero limite: ";
+    cin >> emQuanto;     
+	
+	do {
+		cout << "Favor digitar um numero maior: ";
+    	cin >> emQuanto; 
+		
+	} while(emQuanto < 0);
+	
 
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<int> dist(0, 10);
+	random_device rd;
+	mt19937 gen(rd());
+	uniform_int_distribution<int> dist(0, emQuanto);
+	int num = dist(gen);
 
-    int num = dist(gen);
+
+
+    
 
     do {
         cout << "Digite um palpite: ";
@@ -39,8 +53,9 @@ int main() {
             cout << "Palpite correto! Voce acertou em "
                  << qtdPalpites << " tentativas." << endl;
         }
-
+	
     } while (palpite != num);
-
-    return 0;
+		cout << "O numero sorteado foi:" << num;
+	
+    return 1;
 }
