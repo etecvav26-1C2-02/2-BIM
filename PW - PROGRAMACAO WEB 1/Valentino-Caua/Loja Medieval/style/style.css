@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #3E424B;
+    font-family: 'Modern Antiqua';
+}
+
+/*
+header > a{
+    margin-left: 350px;
+    text-decoration: none;
+    background-color: ;
+    border-radius: 50px;
+    transition: ease-in-out 0.5s ;
+}
+
+*/
+
+header{
+    top: 0;
+    width: 95%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+
+    transition: transform 0.3s ;
+    z-index: 1000;
+}
+header > a:hover{
+    transform: scale(200px);
+    transform: scale(1.5);
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    border-radius: 100%;
+    transition: all;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+img:hover{
+
+    transform: scale(200px);
+    transform: scale(0.95);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-image: url('../assets/fundo-de-chao-de-madeira_53876-88628.jpg');
+    
+  
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        width: 100%; 
+        padding: 20px; 
+        flex-direction: column; 
+        justify-content: center;
+        text-align: center;
+    }
+
+    header img {
+        width: 100px; /* Logo menor no celular */
+        height: 100px;
+        margin: 10px 0; /* Menos espaço em volta */
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column; /* Links um embaixo do outro ou em linha */
+        gap: 15px;
+    }
+
+    header > a {
+        margin-left: 0 !important; /* Remove margens fixas que quebram o layout */
+    }
+}
