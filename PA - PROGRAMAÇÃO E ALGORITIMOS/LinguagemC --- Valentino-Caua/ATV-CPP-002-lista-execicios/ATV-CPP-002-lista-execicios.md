@@ -1,7 +1,7 @@
 # Exercício 1
 ###Ler um número inteiro, exibir a soma dos números ímpares até o número lido e criar uma função que retorne verdadeiro para números ímpares.
 
-´´´cpp
+```
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
    Data: 07/05/2026
@@ -53,4 +53,4 @@ bool isImpar(int num2){
 
 
 
-```
+´´´
