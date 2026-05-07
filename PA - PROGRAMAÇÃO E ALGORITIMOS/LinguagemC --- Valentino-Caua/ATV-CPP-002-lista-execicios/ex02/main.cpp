@@ -21,6 +21,7 @@ int main(){
 int pot(){
     int base;
     int expoente;
+    int atequal;
     int resultado;
     
     cout << "base: ";
@@ -29,8 +30,13 @@ int pot(){
     cout << "expoente: ";
     cin >> expoente;
     
-    resultado = pow(base, expoente);
-    cout << "resultado: " << resultado;
     
+    for(int i = 1; i <= expoente; i++){
+        resultado = pow(base, i);
+        cout << base << " ** "<< i << " = "<< resultado << endl;
+
+    }
+    
+
     return 0;
 }
