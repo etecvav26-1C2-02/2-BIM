@@ -49,6 +49,7 @@ bool isImpar(int num2){
         return false;
     }
 }
+´´´ 
 ---
 # Exercício 2
 ### Calcular a potência usando repetição e criar uma função para o cálculo.
