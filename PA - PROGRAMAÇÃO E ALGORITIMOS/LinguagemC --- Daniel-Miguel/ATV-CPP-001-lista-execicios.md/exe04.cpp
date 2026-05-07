@@ -1,4 +1,8 @@
-
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade:Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
+ */
 
 #include <iostream>
 using namespace std;
