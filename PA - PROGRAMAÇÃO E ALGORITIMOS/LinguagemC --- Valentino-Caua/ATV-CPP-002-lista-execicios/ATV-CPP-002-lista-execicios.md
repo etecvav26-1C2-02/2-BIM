@@ -1,5 +1,5 @@
 # Exercício 1
-###Ler um número inteiro, exibir a soma dos números ímpares até o número lido e criar uma função que retorne verdadeiro para números ímpares.
+### Ler um número inteiro, exibir a soma dos números ímpares até o número lido e criar uma função que retorne verdadeiro para números ímpares.
 
 ```
 /*
@@ -53,4 +53,5 @@ bool isImpar(int num2){
 
 
 
-´´´
+
+---
