@@ -1,6 +1,8 @@
-
- /* Ler vários números até que seja digitado um número negativo. Calcular e exibir a soma desses números./*
-
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 04/05/2026
+   Finalidade: Ler vários números até que seja digitado um número negativo. Calcular e exibir a soma desses números.
+ /*
 using namespace std;
 #include <iostream>
 
