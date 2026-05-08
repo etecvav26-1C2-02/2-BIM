@@ -1,3 +1,8 @@
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade:Leia um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
+*/
 #include <iostream>
 using namespace std;
 
