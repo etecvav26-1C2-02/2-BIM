@@ -1,6 +1,6 @@
-# Verificador de Número Primo em C++
+## 📌 Exercício 1 — Verificador de Número Primo
 
-## exercicio 1
+### 💻 Código
 
 ```cpp
 /*
