@@ -1,7 +1,7 @@
 /*
    Autores: Daniel de Sousa,Miguwl Marcelo
    Data: 04/05/2026
-   Finalidade: Verificar se um número inteiro é primo contando a quantidade de divisores.
+   Finalidade: Ler um número inteiro, calcular e exibir separadamente as potências de 2^0 até 2^(esse número).
 */
 
 #include <iostream>
