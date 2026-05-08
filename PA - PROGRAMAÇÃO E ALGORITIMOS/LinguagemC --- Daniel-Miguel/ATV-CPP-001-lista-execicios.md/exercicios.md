@@ -103,7 +103,6 @@ int main() {
     return 0;
 }
 ```
-```
 ## 📌 Exercício 4 - Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
 ### 💻 Código
 
@@ -178,8 +177,8 @@ int main() {
     
 }
 ```
-# Exercício 7
-### Ler a quantidade de pessoas e ler a altura dessas pessoas. Calcular e exibir a altura média de todas as pessoas.
+# 📌 Exercício 7
+###  💻  Ler a quantidade de pessoas e ler a altura dessas pessoas. Calcular e exibir a altura média de todas as pessoas.
 
 ```cpp
 /*
@@ -210,8 +209,8 @@ cout<< "A média de altura é " << media << ": ";
     return 0;
 }
 ```
-# Exercício 9
-### Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
+# 📌 Exercício 9
+### 💻 Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
 
 ```cpp
 
