@@ -43,9 +43,9 @@ if(vprimo == false ){
 return 0;
 }
 ```
-# Potências de 2 em C++
+## 📌 Exercício 2 — Potências de um Número
 
-## exercicio 2
+### 💻 Código
 
 ```cpp
 /*
@@ -67,6 +67,71 @@ int main() {
       result *= 2;
     }
 
+    
+    return 0;
+}
+```
+## 📌 Exercício 3 — Soma de Números Positivos com Classe
+
+### 💻 Código
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 04/05/2026
+   Finalidade: Ler vários números até que seja digitado um número negativo. Calcular e exibir a soma desses números.
+ */
+using namespace std;
+#include <iostream>
+
+int main() {
+    int numero, soma = 0 ;
+    
+    do {
+        cout << "escreva o numero: ";
+        cin >> numero;
+
+        if (numero >= 0) {
+          
+            soma = soma + numero;
+        }
+        
+ } while (numero >= 0);
+      
+ cout << "A soma é:  " << soma << endl;
+ 
+    return 0;
+}
+```
+## 📌 Exercício 4 — Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
+### 💻 Código
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade:Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero, menor , maior ;
+    cout << "numero 1: ";
+    cin >> numero;
+    menor = numero ;
+    maior = numero;
+    
+    for (int i = 2; i <= 10; i++) {
+        cout << "Número " << i << ": ";
+        cin >> numero;
+        if (numero < menor) {
+        menor = numero;
+        }else if (numero > maior){
+        maior = numero;
+        }
+ }
+    
+
+    cout << "Menor: " << menor << endl;
+    cout << "Maior: " << maior << endl;
     
     return 0;
 }
