@@ -74,6 +74,7 @@ int main() {
 ## 📌 Exercício 3 — Soma de Números Positivos com Classe
 
 ### 💻 Código
+
 /*
    Autores: Daniel de Sousa,Miguel Marcelo
    Data: 04/05/2026
@@ -101,8 +102,10 @@ int main() {
     return 0;
 }
 ```
-## 📌 Exercício 4 — Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
+```
+## 📌 Exercício 4 - Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
 ### 💻 Código
+
 /*
    Autores: Daniel de Sousa,Miguel Marcelo
    Data: 07/05/2026
