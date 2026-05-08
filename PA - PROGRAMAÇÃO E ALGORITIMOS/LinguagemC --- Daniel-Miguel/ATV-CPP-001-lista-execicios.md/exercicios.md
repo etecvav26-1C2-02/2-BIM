@@ -75,6 +75,7 @@ int main() {
 
 ### 💻 Código
 
+```cpp
 /*
    Autores: Daniel de Sousa,Miguel Marcelo
    Data: 04/05/2026
@@ -106,6 +107,7 @@ int main() {
 ## 📌 Exercício 4 - Ler 10 números. Verificar e exibir o menor e maior número dessa sequência.
 ### 💻 Código
 
+```cpp
 /*
    Autores: Daniel de Sousa,Miguel Marcelo
    Data: 07/05/2026
@@ -140,3 +142,105 @@ int main() {
 }
 ```
 
+
+## 📌 Exercício 5 — Múltiplos de um Número
+
+### 💻 Código
+
+```cpp
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade: Ler um número para a parada final e outro número que representa um múltiplo. Exibir os múltiplos do número lido de 1 até o número final lido.
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int limite, base;
+    
+    cout << "Numero final: ";
+    cin >> limite;
+    
+    cout << "multiplo: ";
+    cin >> base;
+    
+    cout << "Múltiplos de " << base << " até " << limite << ":" << endl;
+    
+    for(int i = 1;i <= limite; i++){
+    if (i % base == 0){
+      cout << i << endl;
+        }
+    }
+    
+   
+    return 0;
+    
+}
+```
+# Exercício 7
+### Ler a quantidade de pessoas e ler a altura dessas pessoas. Calcular e exibir a altura média de todas as pessoas.
+
+```cpp
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade:Ler a quantidade de pessoas e ler a altura dessas pessoas. Calcular e exibir a altura média de todas as pessoas.
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+int pessoas;
+
+float media , altura , soma=0.0;
+
+cout<<"Quantas pessoas são? ";
+cin>> pessoas;
+
+for(int i = 1; i <= pessoas; i++){
+    cout<< "Qual a altura da pessoa " << i << ": ";
+    cin >> altura;
+    soma += altura;
+}
+
+media = soma / pessoas;
+cout<< "A média de altura é " << media << ": ";
+
+    return 0;
+}
+```
+# Exercício 9
+### Ler um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
+
+```cpp
+
+/*
+   Autores: Daniel de Sousa,Miguel Marcelo
+   Data: 07/05/2026
+   Finalidade:Leia um número entre 50 e 100. Exibir a sequência de Fibonacci até esse número.
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+int limite;
+int a = 0, b = 1, proximo;
+do{
+     cout << "Digite um numero entre 50 e 100: ";
+        cin >> limite;
+
+}while(limite < 50 || limite > 100);
+
+ cout << "Sequencia de Fibonacci ate " << limite << ":" << endl;
+
+for(int i = 0 ; a <= limite;i++){
+   cout << a << " ";
+        proximo = a + b;
+        a = b;
+        b = proximo;
+}
+
+    return 0;
+}
+```
