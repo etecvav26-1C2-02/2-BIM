@@ -3,39 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja medieval</title>
+    <title>Forja Real - Loja Medieval</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="assets/favicon.ico">
+    
 </head>
 <body>
+
+    <button id="btn-cambio" onclick="toggleMoeda()">🪙 Alternar Moeda (Ouro / R$)</button>
+
     <header>
-        <img src="assets/Logo.png" alt="">
-        <h1>Loja Medieval</h1>
+        <div class="header-brand">
+            <img src="assets/Logo.png" alt="Logotipo Oficial da Forja Real">
+            <h1>Forja Real</h1>
+        </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#quemsomos">Sobre nós</a>
-            <a href="#contato">Contato</a>
+            <a href="#home">Início</a>
+            <a href="#arsenal">Arsenal</a>
+            <a href="#quemsomos">Sobre Nós</a>
+            <a href="#contato">Mensageiro</a>
         </nav>
-        
-        
-
     </header>
-    <section id="home">
-        <div class="content">
 
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/fachadabagui.png');">
+        <div class="hero-content">
+            <h2>Equipe-se para a sua próxima jornada!</h2>
+            <p>Armas forjadas sob as chamas sagradas, armaduras impenetráveis e relíquias dignas de verdadeiras lendas.</p>
+            <a href="#arsenal" class="btn-hero">Explorar o Arsenal ⚔️</a>
+        </div>
+    </section>
+
+    <section id="arsenal" class="produtos-section">
+        <h2 class="section-title">Armamentos de Elite</h2>
+        <div class="content">
+            
             <div class="product-card">
-                <h1>Espada medieval</h1>
-                <img src="https://reidacutelaria.vtexassets.com/arquivos/ids/190664-1200-auto?v=638543153665570000&width=1200&height=auto&aspect=true" alt="espada" id="EspadaIMG">
-                <p class="precoP">Preço:</p>
-                <p>20 moedas de ouro (20 reais)</p>
-                <a href="#compra" type="button">Comprar</a>
+                <span class="tag-raridade">Lendário</span>
+                <h3>Lâmina do Rei: Espada Bastarda</h3>
+                <img src="https://reidacutelaria.vtexassets.com/arquivos/ids/190664-1200-auto?v=638543153665570000&width=1200&height=auto&aspect=true" alt="Lâmina do Rei - Espada Bastarda em Aço Carbono" id="EspadaIMG">
+                <p class="descricao-produto">Forjada à mão sob o fogo da montanha. Balanceamento perfeito e empunhadura em couro nobre.</p>
+                <p class="precoP">Preço do Resgate:</p>
+                <p class="preco-valor" data-ouro="20 moedas de ouro" data-real="R$ 20,00">20 moedas de ouro</p>
+                <a href="#compra" class="btn-comprar">Reivindicar Lâmina ⚔️</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="quemsomos" class="sobre-section">
+        <div class="sobre-container">
+            <div class="sobre-text">
+                <h2>Os Mestres Ferreiros</h2>
+                <p>Nas profundezas das montanhas de ferro, nossos artífices mantêm viva a tradição da forja ancestral. Cada martelada na bigorna é um voto de durabilidade, garantindo que sua arma nunca falhe em combate.</p>
+                <p>Não vendemos mero aço trabalhado; entregamos o destino e a glória em forma de equipamentos autênticos.</p>
+            </div>
+            <div class="sobre-img-container">
+                <img src="assets/Forja.png" alt="O calor de nossa forja medieval" class="img-forja">
             </div>
         </div>
-
-
-
-
     </section>
-    
+
+    <section id="contato" class="contato-section">
+        <h2>Envie um Mensageiro</h2>
+        <p>Precisa de um armamento personalizado ou sob medida? Escreva sua mensagem em nosso pergaminho e enviaremos um corvo veloz de volta!</p>
+        <form class="contato-form" onsubmit="event.preventDefault(); alert('Pergaminho enviado com sucesso! Nosso corvo mensageiro retornará em breve.');">
+            <input type="text" placeholder="Seu nome ou título (Ex: Sir Galahad)" required>
+            <input type="email" placeholder="Seu endereço de correio (E-mail)" required>
+            <textarea placeholder="Sua mensagem para a guilda..." rows="5" required></textarea>
+            <button type="submit" class="btn-enviar">Selar Pergaminho 📜</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Valentino & Caua.</p>
+    </footer>
+
+    <script src="./scripts/script.js">
+
+    </script>
 </body>
 </html>

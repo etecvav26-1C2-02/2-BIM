@@ -1,138 +1,419 @@
 @import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap');
 
-
-
-
-
-*{
+/* --- Reset & Configurações Globais --- */
+* {
     margin: 0;
     padding: 0;
-    color: #3E424B;
-    font-family: 'Modern Antiqua';
-   
-}
-body{
-    background-color: #;
-}
-/*
-header > a{
-    margin-left: 350px;
-    text-decoration: none;
-    background-color: ;
-    border-radius: 50px;
-    transition: ease-in-out 0.5s ;
+    box-sizing: border-box;
+    font-family: 'Modern Antiqua', serif;
+    scroll-behavior: smooth;
 }
 
-*/
+body {
+    background-color: #F4EAD4; /* Bege Pergaminho antigo para melhor contraste */
+    color: #2A1D13; /* Marrom couro escuro para leitura confortável */
+}
 
-header{
+/* --- Botão Flutuante de Câmbio --- */
+#btn-cambio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+    background-color: #D4AF37; /* Ouro Imperial */
+    color: #1a110a;
+    border: 2px solid #2A1D13;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btn-cambio:hover {
+    transform: scale(1.08);
+    background-color: #F5D061;
+}
+
+/* --- Header (Taverna) --- */
+header {
+    position: sticky;
     top: 0;
-    width: 95%;
-    padding: 10px 50px;
+    width: 100%;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid transparent;
-
-    transition: transform 0.3s ;
+    background-image: url('../assets/fundo-de-chao-de-madeira_53876-88628.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #D4AF37; /* Acabamento em Ouro */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     z-index: 1000;
 }
-header > a:hover{
-    transform: scale(200px);
-    transform: scale(1.5);
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    color: #F4EAD4; /* Texto claro para contrastar com a madeira */
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 header img {
-    width: 150px;
-    height: 150px;
-    margin: 30px;
-    border-radius: 100%;
-    transition: all;
-    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
     transition: transform 0.5s ease;
 }
 
-header img:hover{
-
-    transform: scale(200px);
-    transform: scale(0.95);
+header img:hover {
+    transform: rotate(360deg) scale(1.05);
 }
 
-header {
+header nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    gap: 20px;
+}
 
-    background-image: url('../assets/fundo-de-chao-de-madeira_53876-88628.jpg');
-    
-  
+header nav a {
+    text-decoration: none;
+    color: #F4EAD4;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+header nav a:hover {
+    color: #D4AF37;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Seção Hero (Entrada da Forja) --- */
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-size: cover;
     background-position: center;
-    min-height: 100px;
-}
-#EspadaIMG{
-    width: 240px;
-    border-radius: 35px;
-    padding: 10px;
+    color: #F4EAD4;
+    border-bottom: 4px solid #2A1D13;
 }
 
-.product-card{
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #8B0000; /* Vermelho Estandarte */
+    color: #F4EAD4;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #A30000;
+    transform: translateY(-3px);
+}
+
+/* --- Seção de Produtos (Arsenal) --- */
+.produtos-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #8B0000;
+    margin: 10px auto 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* --- Card de Produto --- */
+.product-card {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    background-position: center;
-    min-height: 100px;
+    align-items: center;
     background-image: url('../assets/fundo-de-chao-de-madeira_53876-88628.jpg');
-    padding: 20px 15px;
-    width: fit-content;
-    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
+    width: 320px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 1px 10px 10px 10px rgba(1, 2, 2, 0.2);
-    border: 10px solid transparent;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 3px solid #D4AF37;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card > a{
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.tag-raridade {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #8B0000;
+    color: #F4EAD4;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #D4AF37;
+}
+
+.product-card h3 {
+    color: #F4EAD4;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+#EspadaIMG {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid #2A1D13;
+    margin-bottom: 15px;
+}
+
+.descricao-produto {
+    color: #E2D1B9; /* Excelente leitura sobre a madeira */
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.precoP {
+    color: #D4AF37;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.preco-valor {
+    color: #F4EAD4;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    display: block;
+    width: 100%;
     text-decoration: none;
-    margin-top: 20px;
+    background-color: #8B0000;
+    color: #F4EAD4;
+    padding: 12px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #D4AF37;
+    transition: background-color 0.3s, transform 0.2s;
+}
 
-    background-color: white;
-    padding: 15px 1px 15px;
-    border-radius: 40px;
+.btn-comprar:hover {
+    background-color: #A30000;
+    transform: scale(1.03);
+}
+
+/* --- Seção Sobre Nós (Mestres Ferreiros) --- */
+.sobre-section {
+    background-color: #2A1D13; /* Couro Escuro */
+    color: #F4EAD4;
+    padding: 80px 20px;
+}
+
+.sobre-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-text {
+    flex: 1;
+}
+
+.sobre-text h2 {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.sobre-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sobre-img-container {
+    flex: 1;
+}
+
+.img-forja {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    border: 4px solid #D4AF37;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* --- Seção Contato (Mensageiro) --- */
+.contato-section {
+    padding: 80px 20px;
     text-align: center;
-    justify-content: center;
-    transition: transform 0.3s;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-
-.product-card > a:hover{
-    transform: scale(200px);
-    transform: scale(0.95);
+.contato-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
+.contato-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input, 
+.contato-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #2A1D13;
+    background-color: #FFFDF9;
+    font-size: 1rem;
+    color: #2A1D13;
+}
+
+.contato-form input:focus, 
+.contato-form textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.btn-enviar {
+    background-color: #8B0000;
+    color: #F4EAD4;
+    border: 2px solid #D4AF37;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #A30000;
+    transform: translateY(-2px);
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #1a110a;
+    color: #8E7D6F;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 4px solid #2A1D13;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade --- */
 @media (max-width: 768px) {
     header {
-        width: 100%; 
-        padding: 20px; 
-        flex-direction: column; 
-        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
         text-align: center;
     }
 
-    header img {
-        width: 100px; /* Logo menor no celular */
-        height: 100px;
-        margin: 10px 0; /* Menos espaço em volta */
+    .header-brand {
+        flex-direction: column;
+        gap: 5px;
     }
 
     header nav {
-        display: flex;
-        flex-direction: column; /* Links um embaixo do outro ou em linha */
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
-    header > a {
-        margin-left: 0 !important; /* Remove margens fixas que quebram o layout */
+    header nav a {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
     }
 }
