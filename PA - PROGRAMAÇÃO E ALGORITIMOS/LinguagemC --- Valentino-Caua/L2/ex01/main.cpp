@@ -1,12 +1,12 @@
 /*
    Autores: Caua Balzaneli, Valentino Hoehne
    Data: 07/05/2026
-   Finalidade: Ler um número. Exiba a soma de ímpares de zero até o número lido. Criar uma função que retorne verdadeiro para números ímpares.
+   Finalidade: Ler o sexo e a altura.
+               Calcular o peso ideal:
+                  Masculino: 72,7 × altura - 58
+                  Feminino: 62,1 × altura - 44,7
+               Criar uma função para cada caso.
 */
-
-
-
-
 
 #include <iostream>
 
