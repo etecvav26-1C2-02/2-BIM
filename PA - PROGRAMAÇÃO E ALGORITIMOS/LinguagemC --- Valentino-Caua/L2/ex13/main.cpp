@@ -31,6 +31,6 @@ int main() {
             qntsVezes++;
         }
     }
-    cout << ""
+    cout << "";
     return 0;
 }
