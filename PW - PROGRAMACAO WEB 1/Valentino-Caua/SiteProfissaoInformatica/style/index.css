@@ -1,133 +1,126 @@
 :root {
-    --color-bg: #F7F5F0;
-    --color-surface: #FFFFFF;
-    --color-primary: #0F2447;
-    --color-accent: #E85D3A;
-    --color-muted: #6B6B6B;
-    --color-border: #DDD9D0;
-    --color-code-bg: #EEF1F7;
-    --font-display: 'DM Serif Display', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 4rem;
-    --space-xl: 8rem;
-    --radius-sm: 4px;
-    --radius-md: 10px;
-    --shadow-card: 0 2px 16px rgba(15, 36, 71, .07);
-    --transition: .2s ease;
+  --color-bg: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-primary: #0f2447;
+  --color-accent: #e85d3a;
+  --color-muted: #6b6b6b;
+  --color-border: #ddd9d0;
+  --color-code-bg: #eef1f7;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --shadow-card: 0 2px 16px rgba(15, 36, 71, 0.07);
+  --transition: 0.2s ease;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-bg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d1117; /* fundo escuro estilo GitHub */
+  color: #e6edf3;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
 .macos-dock {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 75px;
 
-
-    background-color: black;
-    /*
+  background-color: black;
+  /*
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     
     */
-    display: blur(20px);
+  display: blur(20px);
 
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
-    padding: 10px 20px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
-
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    z-index: 9999;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 9999;
 }
 
 .macos-dock a {
-    color: var(--color-primary);
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 8px 16px;
-    border-radius: 12px;
-    display: block;
-    color: white;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: block;
+  color: white;
 
-    transform-origin: bottom center;
-    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+  transform-origin: bottom center;
+  transition:
+    transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.2s;
 }
 
-
 .macos-dock a:hover {
-    transform: scale(1.3) translateY(-8px);
-    background-color: white;
-    color: black;
-
+  transform: scale(1.3) translateY(-8px);
+  background-color: white;
+  color: black;
 }
 
 #content {
-    margin-top: 20px;
-    margin-left: 5%;
-    
-    margin-right: auto;
-    color: black;
+  margin-top: 20px;
+  margin-left: 5%;
 
-
+  margin-right: auto;
+  color: white;
 }
-
+h1 { color: #1a56db; }
+a { background: #1a56db; }
 #divcontent h1 {
-    font-size: 6vh;
-    margin-bottom: 70px;
-    text-align: start;
+  font-size: 6vh;
+  margin-bottom: 70px;
+  text-align: start;
 }
 
 #divcontent {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    
-    margin: 80px auto;
-    text-align: center;
-    font-family: Helvetica, sans-serif;
-    border-radius: 5%;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
-    height: 700px;
-    width: 700px;
+  margin: 80px auto;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  height: 700px;
+  width: 700px;
 }
 
-#divcontent p{
-    text-align: start;
-    hyphens: auto;
-    font-size: large
+#divcontent p {
+  text-align: start;
+  hyphens: auto;
+  font-size: large;
 }
 
 #divcontent a {
-    display: inline-block; 
-    margin-top: 90px;
-    background-color: black;
-    color: white; 
-    padding: 15px;  
-    border-radius: 15px;
+  display: inline-block;
+  margin-top: 90px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
 }
