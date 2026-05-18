@@ -3,7 +3,7 @@
   --color-surface: #ffffff;
   --color-primary: #0f2447;
   --color-accent: #e85d3a;
-  --color-muted: #6b6b6b;
+  --color-muted: #8b949e;
   --color-border: #ddd9d0;
   --color-code-bg: #eef1f7;
   --font-display: "DM Serif Display", Georgia, serif;
@@ -28,32 +28,19 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #0d1117; /* fundo escuro estilo GitHub */
+  background-color: #0d1117;
   color: #e6edf3;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .macos-dock {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 75px;
-
   background-color: black;
-  /*
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    
-    */
-  display: blur(20px);
-
   padding: 10px 20px;
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
   position: fixed;
   bottom: 15px;
   left: 50%;
@@ -63,7 +50,6 @@ body {
 }
 
 .macos-dock a {
-  color: var(--color-primary);
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 1.1rem;
@@ -71,7 +57,7 @@ body {
   border-radius: 12px;
   display: block;
   color: white;
-
+  background: none;
   transform-origin: bottom center;
   transition:
     transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
@@ -84,43 +70,92 @@ body {
   color: black;
 }
 
-#content {
-  margin-top: 20px;
-  margin-left: 5%;
-
-  margin-right: auto;
-  color: white;
+h1 {
+  color: #1a56db;
+  font-family: var(--font-display);
 }
-h1 { color: #1a56db; }
-a { background: #1a56db; }
-#divcontent h1 {
-  font-size: 6vh;
-  margin-bottom: 70px;
-  text-align: start;
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 60px 6% 100px 6%;
+  gap: 40px;
 }
 
 #divcontent {
-  margin: 80px auto;
-  text-align: center;
-  font-family: Helvetica, sans-serif;
-  border-radius: 5%;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 10px;
-  height: 700px;
-  width: 700px;
+  flex: 1 1 480px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+}
+
+#divcontent h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #1a56db;
 }
 
 #divcontent p {
   text-align: start;
   hyphens: auto;
-  font-size: large;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: var(--color-muted);
 }
 
 #divcontent a {
   display: inline-block;
-  margin-top: 90px;
-  background-color: black;
-  color: white;
-  padding: 15px;
-  border-radius: 15px;
+  width: fit-content;
+  background-color: #1a56db;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+#divcontent a:hover {
+  background-color: #1344b8;
+  transform: translateY(-2px);
+}
+
+#hero-image {
+  flex: 1 1 420px;
+  max-width: 580px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+#hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    padding: 40px 5% 120px;
+  }
+ 
+  #divcontent {
+    max-width: 100%;
+  }
+ 
+  #hero-image {
+    max-width: 100%;
+  }
+ 
+  .macos-dock {
+    gap: 30px;
+  }
 }
