@@ -1,0 +1,22 @@
+:root {
+
+    --color-bg: #F7F5F0;
+    --color-surface: #FFFFFF;
+    --color-primary: #0F2447;
+    --color-accent: #E85D3A;
+    --color-muted: #6B6B6B;
+    --color-border: #DDD9D0;
+    --color-code-bg: #EEF1F7;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body:    'DM Sans', system-ui, sans-serif;
+    --space-xs: 0.5rem;   /*  8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 2rem;     /* 32px */
+    --space-lg: 4rem;     /* 64px */
+    --space-xl: 8rem;     /* 128px */
+    --radius-sm:   4px;
+    --radius-md:   10px;
+    --shadow-card: 0 2px 16px rgba(15,36,71,.07);
+    --transition:  .2s ease;
+
+}
