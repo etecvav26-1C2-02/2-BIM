@@ -35,6 +35,7 @@ int main() {
         }
     }
 
+    // Cout nos indices
     cout << "O indice do menor valor eh: " << indiceMenor << " (valor: " << arr[indiceMenor] << ")" << endl;
     cout << "O indice do maior valor eh: " << indiceMaior << " (valor: " << arr[indiceMaior] << ")" << endl;
 
