@@ -27,7 +27,7 @@ int main() {
 
         nums[i] = entrada;
     }
-
+    //Laço de repeticao para Contar e exibir: quantidade de pares e quantidade de ímpares
     for (int i = 0; i < 15; i++)
     {
         if(nums[i] % 2 == 0){
@@ -36,7 +36,7 @@ int main() {
             somaImpar += 1;
         }
     }
-    
+    // Cout nas somas
     cout << "São " << somaImpar << "numeros impares" << endl;
     cout << "São " << somaPar << "numeros pares" << endl;
     return 0;
