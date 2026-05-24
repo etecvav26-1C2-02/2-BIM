@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<char> letra(5);
+    vector<char> letra(20);
     char escolha;
     int quant = 0;
 
