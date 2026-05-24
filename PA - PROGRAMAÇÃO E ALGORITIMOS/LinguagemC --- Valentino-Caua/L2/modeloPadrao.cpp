@@ -5,8 +5,8 @@
 */
 
 
-#include <iostream>
-using namespace std;
+#include <iostream> // para cout, cin e etc
+using namespace std; // para evitar ficar usando std::
 
 
 
