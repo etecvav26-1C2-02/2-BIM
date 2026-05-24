@@ -6,6 +6,8 @@
 
 
 #include <iostream> // para cout, cin e etc
+#include <vector>    // para usar vetores
+#include <algorithm> // necessário para usar ordenar
 using namespace std; // para evitar ficar usando std::
 
 
