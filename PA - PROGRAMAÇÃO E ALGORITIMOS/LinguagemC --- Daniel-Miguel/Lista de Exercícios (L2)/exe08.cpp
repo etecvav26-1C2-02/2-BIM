@@ -1,7 +1,7 @@
 /*
    Autores: Daniel de Sousa,Miguel Marcelo
    Data: 07/06/2026
-  Exibir o dia da semana correspondente.
+soma a area de 5 circulos 
 */
 #include <iostream>
 using namespace std;
