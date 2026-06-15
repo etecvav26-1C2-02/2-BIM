@@ -11,7 +11,7 @@
 
 
 }
-/* Reset global importante para que as larguras e paddings funcionem da forma certa */
+
 * {
     margin: 0;
     padding: 0;
@@ -46,6 +46,7 @@ nav {
     justify-content: space-between; 
     align-items: center;
     max-width: 80rem;
+    width: 100%; 
     margin: 0 auto;      
     padding: 1.5rem; 
 }
@@ -56,6 +57,8 @@ nav {
 }
 
 .nav-links a {
+    transition: all;
+    transition-duration: 300ms;
     color: #FFFFFF;
     text-decoration: none; 
 }
@@ -63,6 +66,16 @@ nav {
     color: darkgrey;
 }
 
+button{
+    transition: all;
+    transition-duration: 300ms;
+
+}
+button:hover{
+    background-color: #ad4a03;
+    transform: scale(1.05);
+    
+}
 
 
 button {
@@ -74,3 +87,115 @@ button {
     cursor: pointer;
     font-family: "Archivo Black", sans-serif;
 }
+.secao-portfolio{
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.herodiv1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.saudacao {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.nome {
+    color: var(--cor-botao);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.designer-text {
+    display: block;
+    padding-left: 25%; 
+}
+
+.descricao {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto-secundaria);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.btn-hire {
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-hire:hover {
+    background-color: #e05e00;
+    transform: scale(1.05);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 10px 10px 0px 3px var(--cor-botao); 
+    margin-bottom: 2rem;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.redes-sociais a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.redes-sociais a:hover img {
+    transform: scale(1.1);
+}
+
+
+.hero-text p{
+    font-family: "Archivo Black";
+}
+

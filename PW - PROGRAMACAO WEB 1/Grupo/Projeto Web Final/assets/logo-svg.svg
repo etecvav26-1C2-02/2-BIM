@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="300" height="160">
+  <rect width="300" height="160" fill="#171717"/>
+
+  <g transform="translate(30, 45)">
+    <path d="M 25 10 L 5 35 L 25 60" fill="none" stroke="#FD6F00" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 45 10 L 65 35 L 45 60" fill="none" stroke="#FD6F00" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="42" y1="5" x2="28" y2="65" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="115" y="85" fill="#FFFFFF" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="34" letter-spacing="1">AGÊNCIA</text>
+
+  <text x="118" y="115" fill="#FD6F00" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="4">WEB STUDIO</text>
+</svg>
