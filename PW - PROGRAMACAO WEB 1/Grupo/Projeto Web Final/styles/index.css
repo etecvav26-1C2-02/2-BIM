@@ -1,0 +1,76 @@
+
+
+
+:root {
+
+    --texto-primaria: #FFFFFF;
+    --cor-botao: #FD6F00;
+    --texto-secundaria: #E2E2E2;
+    --cor-principal: #171717;
+
+
+
+}
+/* Reset global importante para que as larguras e paddings funcionem da forma certa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --texto-primaria: #FFFFFF;
+    --cor-botao: #FD6F00;
+    --texto-secundaria: #E2E2E2;
+    --cor-principal: #171717;
+}
+
+body {
+    color: var(--texto-primaria);
+    background-color: var(--cor-principal);
+    font-family: "Archivo Black", sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;       
+    width: 100%;   
+    background-color: #17171791;
+    backdrop-filter: blur(12px);
+    z-index: 50;
+}
+
+.divnav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;      
+    padding: 1.5rem; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;            
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none; 
+}
+.nav-links a:hover{
+    color: darkgrey;
+}
+
+
+
+button {
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Archivo Black", sans-serif;
+}
