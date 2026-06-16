@@ -1,15 +1,8 @@
-
-
-
 :root {
-
     --texto-primaria: #FFFFFF;
     --cor-botao: #FD6F00;
     --texto-secundaria: #E2E2E2;
     --cor-principal: #171717;
-
-
-
 }
 
 * {
@@ -18,17 +11,15 @@
     box-sizing: border-box;
 }
 
-:root {
-    --texto-primaria: #FFFFFF;
-    --cor-botao: #FD6F00;
-    --texto-secundaria: #E2E2E2;
-    --cor-principal: #171717;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     color: var(--texto-primaria);
     background-color: var(--cor-principal);
     font-family: "Archivo Black", sans-serif;
+    overflow-x: hidden;
 }
 
 nav {
@@ -39,6 +30,7 @@ nav {
     background-color: #17171791;
     backdrop-filter: blur(12px);
     z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .divnav {
@@ -57,43 +49,39 @@ nav {
 }
 
 .nav-links a {
-    transition: all;
-    transition-duration: 300ms;
+    transition: all 0.3s ease;
     color: #FFFFFF;
     text-decoration: none; 
 }
-.nav-links a:hover{
-    color: darkgrey;
-}
 
-button{
-    transition: all;
-    transition-duration: 300ms;
-
+.nav-links a:hover {
+    color: var(--cor-botao);
 }
-button:hover{
-    background-color: #ad4a03;
-    transform: scale(1.05);
-    
-}
-
 
 button {
     background-color: var(--cor-botao);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
     font-family: "Archivo Black", sans-serif;
+    transition: all 0.3s ease;
 }
-.secao-portfolio{
+
+button:hover {
+    background-color: #e05e00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 111, 0, 0.4);
+}
+
+.secao-portfolio {
     position: relative;
     min-height: 100vh;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .herodiv1 {
@@ -110,6 +98,7 @@ button {
 .hero-text {
     flex: 1;
     max-width: 600px;
+    animation: fadeUp 1s ease-out;
 }
 
 .saudacao {
@@ -125,14 +114,16 @@ button {
 }
 
 .hero-text h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
 .designer-text {
     display: block;
-    padding-left: 25%; 
+    padding-left: 10%; 
+    color: transparent;
+    -webkit-text-stroke: 1px var(--texto-primaria);
 }
 
 .descricao {
@@ -148,12 +139,6 @@ button {
     padding: 12px 32px;
     font-size: 1.1rem;
     border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-hire:hover {
-    background-color: #e05e00;
-    transform: scale(1.05);
 }
 
 .hero-visual {
@@ -161,22 +146,34 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeUp 1s ease-out 0.2s backwards;
 }
 
 .foto-perfil {
-    width: 400px;
-    height: 400px;
+    width: clamp(250px, 30vw, 400px);
+    height: clamp(250px, 30vw, 400px);
     border-radius: 50%;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 10px 10px 0px 3px var(--cor-botao); 
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.02);
 }
 
 .foto-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.foto-perfil:hover img {
+    filter: grayscale(0%);
 }
 
 .redes-sociais {
@@ -187,15 +184,115 @@ button {
 .redes-sociais a img {
     width: 30px;
     height: 30px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, filter 0.2s;
+    filter: brightness(0.8);
 }
 
 .redes-sociais a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-3px);
+    filter: brightness(1);
 }
 
-
-.hero-text p{
+.hero-text p {
     font-family: "Archivo Black";
 }
 
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .herodiv1 {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .designer-text {
+        padding-left: 0;
+    }
+
+    .descricao {
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none; 
+    }
+}
+
+@media (max-width: 600px) {
+    .foto-perfil {
+        box-shadow: 6px 6px 0px 2px var(--cor-botao); 
+    }
+}
+
+/* Page specific styles (About Us, Services) */
+.page-content {
+    max-width: 80rem;
+    margin: 120px auto 0;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeUp 1s ease-out;
+}
+
+.page-content h1 {
+    font-size: 3rem;
+    color: var(--cor-botao);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: sans-serif;
+    color: var(--texto-secundaria);
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(253, 111, 0, 0.2);
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    color: var(--cor-botao);
+}
+
+.info-card p {
+    font-family: sans-serif;
+    color: var(--texto-secundaria);
+    line-height: 1.5;
+}
