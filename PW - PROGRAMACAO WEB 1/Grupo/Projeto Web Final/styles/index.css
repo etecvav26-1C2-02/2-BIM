@@ -1,16 +1,24 @@
+/*
+    Variaveis
+*/
+
 :root {
     --texto-primaria: #FFFFFF;
     --cor-botao: #FD6F00;
     --texto-secundaria: #E2E2E2;
     --cor-principal: #171717;
 }
-
+/*
+    Padronizar tudo
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*
+    Deixar o scroll bonito
+*/
 html {
     scroll-behavior: smooth;
 }
@@ -75,6 +83,22 @@ button:hover {
     box-shadow: 0 4px 12px rgba(253, 111, 0, 0.4);
 }
 
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: var(--cor-principal);
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
 .secao-portfolio {
     position: relative;
     min-height: 100vh;
@@ -82,6 +106,9 @@ button:hover {
     display: flex;
     align-items: center;
     padding-top: 80px;
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .herodiv1 {
@@ -98,7 +125,14 @@ button:hover {
 .hero-text {
     flex: 1;
     max-width: 600px;
-    animation: fadeUp 1s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secao-portfolio.active .hero-text {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .saudacao {
@@ -146,7 +180,14 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeUp 1s ease-out 0.2s backwards;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.secao-portfolio.active .hero-visual {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .foto-perfil {
@@ -295,4 +336,100 @@ button:hover {
     font-family: sans-serif;
     color: var(--texto-secundaria);
     line-height: 1.5;
+}
+
+/* Slider Controls */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(23, 23, 23, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.slider-btn:hover {
+    background: var(--cor-botao);
+    border-color: var(--cor-botao);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 25px rgba(253, 111, 0, 0.6);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-btn {
+    left: 2rem;
+}
+
+.next-btn {
+    right: 2rem;
+}
+
+/* Dots indicators */
+.slider-dots {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.dot.active {
+    width: 32px;
+    border-radius: 6px;
+    background: var(--cor-botao);
+    box-shadow: 0 0 15px rgba(253, 111, 0, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        background: rgba(23, 23, 23, 0.7);
+    }
+    
+    .prev-btn {
+        left: 1rem;
+    }
+    
+    .next-btn {
+        right: 1rem;
+    }
+    
+    .slider-dots {
+        bottom: 1.5rem;
+    }
 }
